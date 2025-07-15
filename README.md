@@ -20,18 +20,23 @@
 ```bash
 python -m venv whisper-env
 source whisper-env/bin/activate
+```
 
 ### 2. 安裝必要套件
+```bash
 pip install git+https://github.com/openai/whisper.git
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
 如果沒有 GPU，可改安裝 CPU 版本：
 pip install torch torchvision torchaudio
+```
 
 ### 使用方式
+```bash
 python transcribe_csv.py --file "你的音檔.m4a" --model medium --lang zh --out "逐字稿.csv"
+```
 
-##📥 CLI 參數說明
+## 📥 CLI 參數說明
 參數	說明	範例
 --file	✅ 必填：音訊檔案路徑（可含空格）	"語音 0702.m4a"
 --model	Whisper 模型大小（預設：base）	tiny, base, small, medium, large
